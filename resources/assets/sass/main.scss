@@ -1,5 +1,6 @@
 @import url( 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
 @import "reset";
+@import "variables";
 
 body {
   display: flex;
@@ -76,6 +77,31 @@ body {
         font-size: .8rem;
         padding: 10px 0;
       }
+    }
+  }
+}
+
+#content-area{
+  .search-header{
+    padding: 10px;
+    position: relative;
+    .search-box{
+      width: 600px;
+      margin: 0 auto;
+
+      input[type="text"]{
+        background: #F3F3F3;
+        border: none;
+        border-radius: 3px;
+        font-size: 1.2rem;
+        width: 100%;
+        padding: 5px 15px;
+      }
+    }
+    .icon-section{
+      position: absolute;
+      top: 0;
+      right: 0;
     }
   }
 }
