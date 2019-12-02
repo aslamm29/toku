@@ -274,11 +274,74 @@ body {
       z-index: 1;
       position: relative;
       top: -50px;
-      padding: 50px 0;
+      padding: 50px 20px;
       background: $backgroundContent;
       -webkit-box-shadow: 0px 21px 48px -21px rgba(59,71,99,0.5);
       -moz-box-shadow: 0px 21px 48px -21px rgba(59,71,99,0.5);
       box-shadow: 0px 21px 48px -21px rgba(59,71,99,0.5);
+
+      .update-info{
+        h3{
+          text-transform: uppercase;
+          font-weight: 600;
+          color: $htext;
+          line-height: 1.5;
+          font-size: 1.3rem;
+          margin-bottom: 1rem;
+        }
+        p{
+          color: $ptext;
+          line-height: 2;
+          font-size: .8rem;
+          margin-bottom: 1rem;
+        }
+      }
+
+      .update-stats{
+        display: flex;
+        padding: 15px 0;
+        border-top: 2px solid $border;
+        border-bottom: 2px solid $border;
+        margin-bottom: 30px;
+
+        .icon-section{
+          .like-circle{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 20px;
+            width: 20px;
+            font-size: .6rem;
+            color: white;
+            border-radius: 50%;
+            background: linear-gradient(to bottom, #32adff 0%, #0178ff 100%);
+
+            .fa-thumbs-up{
+              position: relative;
+              top: -1px;
+            }
+          }
+        }
+
+        .other-users{
+          width: 70%;
+          padding-left: 10px;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          color: $veryLightText;
+          font-size: .8rem;
+        }
+
+        .comments-stats{
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          width: 30%;
+          color: $veryLightText;
+          font-size: .8rem;
+        }
+      }
     }
   }
 }
