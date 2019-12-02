@@ -26,6 +26,7 @@ body {
   max-width: 1400px;
   background: #fff;
   min-height: calc(100vh - 15vh);
+  overflow: hidden;
   border-radius: 5px;
   display: grid;
   grid-template-columns: 15% 65% 20%;
@@ -87,6 +88,15 @@ body {
 
 #content-container{
   overflow: hidden;
+  height: 700px; //900px for larger screen sizes
+
+  .content-area{
+    box-sizing: content-box;
+    width: 100%;
+    height: calc(100% - 53px);
+    overflow: auto;
+    padding: 0 15px 0 8px;
+  }
 
   .search-header{
     padding: 10px;
