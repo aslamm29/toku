@@ -188,9 +188,7 @@ body {
         align-items: center;
         justify-content: center;
         font-size: 1rem;
-        -webkit-box-shadow: 0px 0px 15px -3px rgba(191,191,191,1);
-        -moz-box-shadow: 0px 0px 15px -3px rgba(191,191,191,1);
-        box-shadow: 0px 0px 15px -3px rgba(191,191,191,1);
+        box-shadow: $boxshadowbtns;
         color: $htext;
 
         &.send-btn{
@@ -340,6 +338,55 @@ body {
           width: 30%;
           color: $veryLightText;
           font-size: .8rem;
+        }
+      }
+
+      .compose-comment{
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        
+        textarea{
+          position: relative;
+          z-index: 2;
+          border: none;
+          height: 40px;
+          width: 100%;
+          border-radius: 20px;
+          box-shadow: $boxshadowbtns;
+        }
+        .buttons{
+          display: flex;
+
+          .repost-btn{
+            height: 40px;
+            width: 40px;
+            background: white;
+            box-shadow: $boxshadowbtns;
+            color: $darksideBlue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-left: 20px;
+          }
+          .like-btn{
+            height: 40px;
+            width: 40px;
+            background: linear-gradient(to bottom, #32adff 0%, #0178ff 100%);
+            box-shadow: $boxshadowbtns;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-left: 20px;
+
+            .fa-thumbs-up{
+              position: relative;
+              top: -2px;
+            }
+          }
         }
       }
     }
