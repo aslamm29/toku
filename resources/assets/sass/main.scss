@@ -1,6 +1,7 @@
 @import url( 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
 @import "reset";
 @import "variables";
+@import "pages/welcome.scss";
 @import "pages/home.scss";
 
 *{
@@ -30,8 +31,6 @@ body {
   height: 650px; //inline with the height in the content-area
   overflow: hidden;
   border-radius: 5px;
-  display: grid;
-  grid-template-columns: 15% 65% 20%;
 }
 
 input:focus,
