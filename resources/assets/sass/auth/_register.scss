@@ -1,3 +1,45 @@
 .register-page{
-    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    h1{
+        font-family: $cursive;
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 1.2rem;
+    }
+
+    hr{
+        height: 1px;
+        background: #1b1b1b;
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    a{
+        text-decoration: none;
+        color: blue;
+        text-transform: capitalize;
+        text-align: center;
+        display: block;
+    }
+
+    .register-form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        form{
+            min-width: 350px;
+            max-width: 400px;
+        }
+    }
+
+    .side-image{
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-image: url('https://images.pexels.com/photos/9746/people-mother-family-father.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+        background-size: cover;
+        height: 100%;
+    }
 }

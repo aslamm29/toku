@@ -14,23 +14,29 @@
 
 @section('content')
   <div class="register-form">
-      <form action="/register" method="POST">
+    <h1>Toku</h1>
+      <form action="/register" method="POST" class="default-form">
         <div class="form-group">
           <label for="email">Email:</label>
-          <input type="email" name="email" value="">
+          <input type="email" name="email" value="" class="text">
         </div>
         <div class="form-group">
           <label for="password">Password:</label>
-          <input type="password" name="password" value="">
+          <input type="password" name="password" value="" class="text">
         </div>
         <div class="form-group">
           <label for="confirm_password">Confirm Password:</label>
-          <input type="password" name="confirm_password" value="">
+          <input type="password" name="confirm_password" value="" class="text">
         </div>
         <div class="form-group">
-          <button type="submit">Save</button>
+          <button type="submit">Register</button>
         </div>
+        <hr>
+        <a href="/login">I remebered my info, let me login</a>
       </form>
   </div>
+<div class="side-image">
+
+</div>
 @endsection
 
