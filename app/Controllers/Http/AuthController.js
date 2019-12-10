@@ -20,25 +20,42 @@ class AuthController {
         if(request.input('password') === request.input('confirm_password')){
             //check if it fails validation
             if (validation.fails()) {
-                // session
-                //     .withErrors(validation.messages())
-                //     .flashExcept(['password'])
+                session
+                    .withErrors(validation.messages())
+                    .flashExcept(['password'])
             
-                //   return response.redirect('back')
-                    return `error: there is a problem with email error`
+                  return response.redirect('back')
                 }else{
+                    //save user to database
                     try{
                         let newUser = await User.create({
                             email: request.input('email'),
                             password: request.input('password')
                         })
                     }catch(error){
+                        //show errors if problems with database
                         console.log('error')
-                        return 'problems with database'
+                        session
+                            .withErrors([
+                                {field: 'database', message: 'problem with database try again later'},
+                            ])
+                            .flashExcept(['password'])
+                    
+                        return response.redirect('back')
                     }
-                    return 'Validation passed'
+                    session.flash({ notification: 'Welcome to Toku'})
+                    return response.redirect('/home')
                 }
         }else{
+            //show errors if password dont match
+            session
+                .withErrors([
+                    {field: 'password', message: 'need to confirm password'},
+                    {field: 'confirm_password', message: 'need to confirm password'}
+                ])
+                .flashExcept(['password'])
+            
+            return response.redirect('back')
            return `passwords dont match`
         }
     }
