@@ -1,7 +1,8 @@
 'use strict'
 
 class PageController {
-    async home({response, request, view}){
+    async home({response, request, view, auth}){
+        
         return view.render('pages/home')
     }
     async welcome({response, request, view}){
