@@ -62,7 +62,7 @@ class AuthController {
     async login({response, request, view}){
         return view.render('auth/login')
     }
-    async loginUser({response, request, view, auth}){
+    async loginUser({response, request, view, auth, session}){
         //capture the data from the form
         const postData = request.post()
 
@@ -75,11 +75,27 @@ class AuthController {
          if(passwordVerified){
             //login the user
             await auth.login(user)
+            session.flash({ notification: 'Welcome to Toku'})
             return response.redirect('/home')
+         }else{
+             //password incorrect
+             session
+                .withErrors([
+                 {field: 'password', message: `Incorrect Password`},
+                ])
+                .flashExcept(['password'])        
+            return response.redirect('back')
          }
+        }else{
+            //cant find user with that email
+            session
+                .withErrors([
+                 {field: 'email', message: `Can't find user with that email`},
+                ])
+                .flashExcept(['password'])        
+            return response.redirect('back')
         }
 
-        return request.post()
     }
     async forgotPassword({response, request, view}){
         return view.render('auth/forgotPassword')
