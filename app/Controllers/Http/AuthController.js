@@ -44,7 +44,7 @@ class AuthController {
                         return response.redirect('back')
                     }
                     session.flash({ notification: 'Welcome to Toku'})
-                    return response.redirect('/home')
+                    return response.redirect('/')
                 }
         }else{
             //show errors if password dont match
@@ -76,7 +76,7 @@ class AuthController {
             //login the user
             await auth.login(user)
             session.flash({ notification: 'Welcome to Toku'})
-            return response.redirect('/home')
+            return response.redirect('/')
          }else{
              //password incorrect
              session
