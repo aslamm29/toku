@@ -4,11 +4,13 @@ export default class LeftMenu extends Component {
   constructor() {
     super();
     this.state = {
-      name: "Aslam"
+      dropdown: false
     };
   }
-  clickedBtn = () => {
-    console.log("swag");
+  clickedDropdown = () => {
+    this.setState({
+      dropdown: !this.state.dropdown
+    })
   };
   render() {
     return (
@@ -17,9 +19,16 @@ export default class LeftMenu extends Component {
             <div className="logo">
               <i className="fab fa-typo3" />
             </div>
-            <div className="name">John Doe</div>
-            <div className="icon">
+            <div className="name" onClick={this.clickedDropdown}>John Doe</div>
+            <div className="icon" onClick={this.clickedDropdown}>
               <i className="fas fa-chevron-down" />
+            </div>
+
+            <div className={`dropdown ${this.state.dropdown ? 'active' : ''}`}>
+              <nav>
+                <a href="/account">account</a>
+                <a href="/logout">logout</a>
+              </nav>
             </div>
           </div>
           <div className="groups">

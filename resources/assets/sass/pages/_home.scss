@@ -9,7 +9,7 @@
           display: grid;
           grid-template-columns: 1fr 3fr 1fr;
           padding: 15px;
-          
+          position: relative;       
           
           .logo{
             display: flex;
@@ -24,13 +24,43 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            cursor: pointer;
           }
           .icon{
             display: flex;
             justify-content: center;
             align-items: center;
+            cursor: pointer;
+            
             .fa-chevron-down{
               font-size: .8rem;
+            }
+          }
+        }
+        .dropdown{
+          position: absolute;
+          bottom: -25px;
+          left: 0;
+          width: 100%;
+          z-index: 10;
+          background: white;
+          box-shadow: $boxshadowbtns;
+          transition: all 0.6s ease-in-out;
+          visibility: hidden;
+          opacity: 0;
+          cursor: pointer;
+
+          &.active{
+            visibility: visible;
+            bottom: -62px;
+            opacity: 1;
+            color: $htext;
+          }
+
+          nav{
+            a{
+              display: block;
+              padding: 10px 15px;
             }
           }
         }
