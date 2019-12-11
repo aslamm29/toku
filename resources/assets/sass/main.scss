@@ -24,6 +24,10 @@ body {
   background: linear-gradient(135deg, rgba(23,35,104,1) 0%, rgba(226,73,175,1) 100%);
 }
 
+#app{
+  width: 100%;
+}
+
 .app-container{
   width: 100%;
   max-width: 1400px;
@@ -32,6 +36,7 @@ body {
   height: 650px; //inline with the height in the content-area
   overflow: hidden;
   border-radius: 5px;
+  margin: 0 auto;
 }
 
 input:focus,

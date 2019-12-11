@@ -33,22 +33,930 @@ var Layout = function (_Component) {
     var _this = _possibleConstructorReturn(this, (Layout.__proto__ || Object.getPrototypeOf(Layout)).call(this));
 
     _this.clickedBtn = function () {
-      console.log('swag');
+      console.log("swag");
     };
 
     _this.state = {
-      name: 'Joe'
+      name: "Aslam"
     };
     return _this;
   }
 
   _createClass(Layout, [{
-    key: 'render',
+    key: "render",
     value: function render() {
       return _react2.default.createElement(
-        'div',
-        { className: 'home' },
-        'This is my first react component'
+        "div",
+        { className: "app-container home-page" },
+        _react2.default.createElement(
+          "section",
+          { id: "left-menu" },
+          _react2.default.createElement(
+            "div",
+            { className: "account-dropdown" },
+            _react2.default.createElement(
+              "div",
+              { className: "logo" },
+              _react2.default.createElement("i", { className: "fab fa-typo3" })
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "name" },
+              "mhd aslam"
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "icon" },
+              _react2.default.createElement("i", { className: "fas fa-chevron-down" })
+            )
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "groups" },
+            _react2.default.createElement(
+              "div",
+              { className: "group" },
+              _react2.default.createElement(
+                "div",
+                { className: "title" },
+                "Title"
+              ),
+              _react2.default.createElement(
+                "ul",
+                null,
+                _react2.default.createElement(
+                  "li",
+                  null,
+                  _react2.default.createElement(
+                    "a",
+                    { href: "/logout" },
+                    "Logout"
+                  )
+                ),
+                _react2.default.createElement(
+                  "li",
+                  null,
+                  "link"
+                ),
+                _react2.default.createElement(
+                  "li",
+                  null,
+                  "link"
+                )
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          "section",
+          { id: "content-container" },
+          _react2.default.createElement(
+            "div",
+            { className: "search-header" },
+            _react2.default.createElement(
+              "div",
+              { className: "search-box" },
+              _react2.default.createElement("input", { type: "text", name: true, defaultValue: true }),
+              _react2.default.createElement(
+                "div",
+                { className: "icon-section" },
+                _react2.default.createElement(
+                  "div",
+                  { className: "noti" },
+                  _react2.default.createElement("i", { className: "fas fa-bell" }),
+                  _react2.default.createElement(
+                    "div",
+                    { className: "noti-number active" },
+                    "3+"
+                  )
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "comments" },
+                  _react2.default.createElement("i", { className: "fas fa-comment" }),
+                  _react2.default.createElement(
+                    "div",
+                    { className: "noti-number active" },
+                    "3"
+                  )
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "user" },
+                  _react2.default.createElement("i", { className: "fas fa-user" }),
+                  _react2.default.createElement(
+                    "div",
+                    { className: "noti-number active" },
+                    "3"
+                  )
+                )
+              )
+            )
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "content-area" },
+            _react2.default.createElement(
+              "section",
+              { className: "compose-section" },
+              _react2.default.createElement("textarea", { name: "name", rows: 8, cols: 80, defaultValue: "" }),
+              _react2.default.createElement("div", { className: "user-img" }),
+              _react2.default.createElement(
+                "div",
+                { className: "buttons" },
+                _react2.default.createElement(
+                  "div",
+                  { className: "button photo-btn" },
+                  _react2.default.createElement("i", { className: "fas fa-camera-retro" })
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "button video-btn" },
+                  _react2.default.createElement("i", { className: "fas fa-video" })
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "button send-btn" },
+                  _react2.default.createElement("i", { className: "fas fa-paper-plane" })
+                )
+              )
+            ),
+            _react2.default.createElement(
+              "section",
+              { id: "updates" },
+              _react2.default.createElement(
+                "div",
+                { className: "update-container" },
+                _react2.default.createElement(
+                  "div",
+                  { className: "author-info" },
+                  _react2.default.createElement("a", { href: "#", className: "user-img" }),
+                  _react2.default.createElement(
+                    "div",
+                    { className: "info" },
+                    _react2.default.createElement(
+                      "a",
+                      { href: "#" },
+                      "James Doe"
+                    ),
+                    " shared a ",
+                    _react2.default.createElement(
+                      "a",
+                      { href: "#" },
+                      "story"
+                    )
+                  )
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "media" },
+                  _react2.default.createElement("div", {
+                    className: "image",
+                    style: {
+                      background: 'url("https://www.opstart.ca/wp-content/uploads/2017/04/importance-of-motivation-1080x611.jpg")',
+                      backgroundPosition: "center center",
+                      backgroundRepeat: "no-repeat",
+                      backgroundSize: "cover"
+                    }
+                  })
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "padding-container" },
+                  _react2.default.createElement(
+                    "div",
+                    { className: "grey-container" },
+                    _react2.default.createElement(
+                      "div",
+                      { className: "update-info" },
+                      _react2.default.createElement(
+                        "h3",
+                        null,
+                        "How to become a developer?"
+                      ),
+                      _react2.default.createElement(
+                        "p",
+                        null,
+                        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem consequuntur itaque porro eveniet voluptatibus. Vero reprehenderit, amet libero maiores dolore accusantium non ea, sint eveniet eos, dolorem consequuntur excepturi. Deleniti."
+                      )
+                    ),
+                    _react2.default.createElement(
+                      "div",
+                      { className: "update-stats" },
+                      _react2.default.createElement(
+                        "div",
+                        { className: "icon-section" },
+                        _react2.default.createElement(
+                          "div",
+                          { className: "like-circle" },
+                          _react2.default.createElement("i", { className: "fas fa-thumbs-up" })
+                        )
+                      ),
+                      _react2.default.createElement(
+                        "div",
+                        { className: "other-users" },
+                        "Sarah Russel and 23 others liked update"
+                      ),
+                      _react2.default.createElement(
+                        "div",
+                        { className: "comments-stats" },
+                        "4 comments"
+                      )
+                    ),
+                    _react2.default.createElement(
+                      "div",
+                      { className: "compose-comment" },
+                      _react2.default.createElement("textarea", {
+                        name: "name",
+                        rows: 8,
+                        cols: 70,
+                        defaultValue: ""
+                      }),
+                      _react2.default.createElement(
+                        "div",
+                        { className: "buttons" },
+                        _react2.default.createElement(
+                          "div",
+                          { className: "repost-btn" },
+                          _react2.default.createElement("i", { className: "fas fa-share" })
+                        ),
+                        _react2.default.createElement(
+                          "div",
+                          { className: "like-btn" },
+                          _react2.default.createElement("i", { className: "fas fa-thumbs-up" })
+                        )
+                      )
+                    )
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "update-container" },
+                _react2.default.createElement(
+                  "div",
+                  { className: "author-info" },
+                  _react2.default.createElement("a", { href: "#", className: "user-img" }),
+                  _react2.default.createElement(
+                    "div",
+                    { className: "info" },
+                    _react2.default.createElement(
+                      "a",
+                      { href: "#" },
+                      "James Doe"
+                    ),
+                    " shared a ",
+                    _react2.default.createElement(
+                      "a",
+                      { href: "#" },
+                      "story"
+                    )
+                  )
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "media" },
+                  _react2.default.createElement("div", {
+                    className: "image",
+                    style: {
+                      background: 'url("https://www.opstart.ca/wp-content/uploads/2017/04/importance-of-motivation-1080x611.jpg")',
+                      backgroundPosition: "center center",
+                      backgroundRepeat: "no-repeat",
+                      backgroundSize: "cover"
+                    }
+                  })
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "padding-container" },
+                  _react2.default.createElement(
+                    "div",
+                    { className: "grey-container" },
+                    _react2.default.createElement(
+                      "div",
+                      { className: "update-info" },
+                      _react2.default.createElement(
+                        "h3",
+                        null,
+                        "How to become a developer?"
+                      ),
+                      _react2.default.createElement(
+                        "p",
+                        null,
+                        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem consequuntur itaque porro eveniet voluptatibus. Vero reprehenderit, amet libero maiores dolore accusantium non ea, sint eveniet eos, dolorem consequuntur excepturi. Deleniti."
+                      )
+                    ),
+                    _react2.default.createElement(
+                      "div",
+                      { className: "update-stats" },
+                      _react2.default.createElement(
+                        "div",
+                        { className: "icon-section" },
+                        _react2.default.createElement(
+                          "div",
+                          { className: "like-circle" },
+                          _react2.default.createElement("i", { className: "fas fa-thumbs-up" })
+                        )
+                      ),
+                      _react2.default.createElement(
+                        "div",
+                        { className: "other-users" },
+                        "Sarah Russel and 23 others liked update"
+                      ),
+                      _react2.default.createElement(
+                        "div",
+                        { className: "comments-stats" },
+                        "4 comments"
+                      )
+                    ),
+                    _react2.default.createElement(
+                      "div",
+                      { className: "compose-comment" },
+                      _react2.default.createElement("textarea", {
+                        name: "name",
+                        rows: 8,
+                        cols: 70,
+                        defaultValue: ""
+                      }),
+                      _react2.default.createElement(
+                        "div",
+                        { className: "buttons" },
+                        _react2.default.createElement(
+                          "div",
+                          { className: "repost-btn" },
+                          _react2.default.createElement("i", { className: "fas fa-share" })
+                        ),
+                        _react2.default.createElement(
+                          "div",
+                          { className: "like-btn" },
+                          _react2.default.createElement("i", { className: "fas fa-thumbs-up" })
+                        )
+                      )
+                    )
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "update-container" },
+                _react2.default.createElement(
+                  "div",
+                  { className: "author-info" },
+                  _react2.default.createElement("a", { href: "#", className: "user-img" }),
+                  _react2.default.createElement(
+                    "div",
+                    { className: "info" },
+                    _react2.default.createElement(
+                      "a",
+                      { href: "#" },
+                      "James Doe"
+                    ),
+                    " shared a ",
+                    _react2.default.createElement(
+                      "a",
+                      { href: "#" },
+                      "story"
+                    )
+                  )
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "media" },
+                  _react2.default.createElement("div", {
+                    className: "image",
+                    style: {
+                      background: 'url("https://www.opstart.ca/wp-content/uploads/2017/04/importance-of-motivation-1080x611.jpg")',
+                      backgroundPosition: "center center",
+                      backgroundRepeat: "no-repeat",
+                      backgroundSize: "cover"
+                    }
+                  })
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "padding-container" },
+                  _react2.default.createElement(
+                    "div",
+                    { className: "grey-container" },
+                    _react2.default.createElement(
+                      "div",
+                      { className: "update-info" },
+                      _react2.default.createElement(
+                        "h3",
+                        null,
+                        "How to become a developer?"
+                      ),
+                      _react2.default.createElement(
+                        "p",
+                        null,
+                        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem consequuntur itaque porro eveniet voluptatibus. Vero reprehenderit, amet libero maiores dolore accusantium non ea, sint eveniet eos, dolorem consequuntur excepturi. Deleniti."
+                      )
+                    ),
+                    _react2.default.createElement(
+                      "div",
+                      { className: "update-stats" },
+                      _react2.default.createElement(
+                        "div",
+                        { className: "icon-section" },
+                        _react2.default.createElement(
+                          "div",
+                          { className: "like-circle" },
+                          _react2.default.createElement("i", { className: "fas fa-thumbs-up" })
+                        )
+                      ),
+                      _react2.default.createElement(
+                        "div",
+                        { className: "other-users" },
+                        "Sarah Russel and 23 others liked update"
+                      ),
+                      _react2.default.createElement(
+                        "div",
+                        { className: "comments-stats" },
+                        "4 comments"
+                      )
+                    ),
+                    _react2.default.createElement(
+                      "div",
+                      { className: "compose-comment" },
+                      _react2.default.createElement("textarea", {
+                        name: "name",
+                        rows: 8,
+                        cols: 70,
+                        defaultValue: ""
+                      }),
+                      _react2.default.createElement(
+                        "div",
+                        { className: "buttons" },
+                        _react2.default.createElement(
+                          "div",
+                          { className: "repost-btn" },
+                          _react2.default.createElement("i", { className: "fas fa-share" })
+                        ),
+                        _react2.default.createElement(
+                          "div",
+                          { className: "like-btn" },
+                          _react2.default.createElement("i", { className: "fas fa-thumbs-up" })
+                        )
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          "section",
+          { id: "messenger" },
+          _react2.default.createElement(
+            "div",
+            { className: "messenger-header" },
+            _react2.default.createElement(
+              "div",
+              { className: "messenger-icon" },
+              _react2.default.createElement("i", { className: "fab fa-facebook-messenger" })
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "title" },
+              "Messenger"
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "options-icon" },
+              _react2.default.createElement("i", { className: "fas fa-ellipsis-v" })
+            )
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "users" },
+            _react2.default.createElement(
+              "div",
+              { className: "users-container" },
+              _react2.default.createElement(
+                "div",
+                { className: "user" },
+                _react2.default.createElement("div", {
+                  className: "user-img",
+                  style: {
+                    background: 'url("https://tinyfac.es/data/avatars/26CFEFB3-21C8-49FC-8C19-8E6A62B6D2E0-200w.jpeg")',
+                    backgroundPosition: "center center",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                    borderRadius: "50%",
+                    height: "30px",
+                    width: "30px"
+                  }
+                }),
+                _react2.default.createElement(
+                  "div",
+                  { className: "username" },
+                  "James Doe"
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "conversation" },
+                  _react2.default.createElement("i", { className: "fas fa-comment-dots" })
+                )
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "user" },
+                _react2.default.createElement("div", {
+                  className: "user-img",
+                  style: {
+                    background: 'url("https://tinyfac.es/data/avatars/26CFEFB3-21C8-49FC-8C19-8E6A62B6D2E0-200w.jpeg")',
+                    backgroundPosition: "center center",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                    borderRadius: "50%",
+                    height: "30px",
+                    width: "30px"
+                  }
+                }),
+                _react2.default.createElement(
+                  "div",
+                  { className: "username" },
+                  "James Doe"
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "conversation" },
+                  _react2.default.createElement("i", { className: "fas fa-comment-dots" })
+                )
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "user" },
+                _react2.default.createElement("div", {
+                  className: "user-img",
+                  style: {
+                    background: 'url("https://tinyfac.es/data/avatars/26CFEFB3-21C8-49FC-8C19-8E6A62B6D2E0-200w.jpeg")',
+                    backgroundPosition: "center center",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                    borderRadius: "50%",
+                    height: "30px",
+                    width: "30px"
+                  }
+                }),
+                _react2.default.createElement(
+                  "div",
+                  { className: "username" },
+                  "James Doe"
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "conversation" },
+                  _react2.default.createElement("i", { className: "fas fa-comment-dots" })
+                )
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "user" },
+                _react2.default.createElement("div", {
+                  className: "user-img",
+                  style: {
+                    background: 'url("https://tinyfac.es/data/avatars/26CFEFB3-21C8-49FC-8C19-8E6A62B6D2E0-200w.jpeg")',
+                    backgroundPosition: "center center",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                    borderRadius: "50%",
+                    height: "30px",
+                    width: "30px"
+                  }
+                }),
+                _react2.default.createElement(
+                  "div",
+                  { className: "username" },
+                  "James Doe"
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "conversation" },
+                  _react2.default.createElement("i", { className: "fas fa-comment-dots" })
+                )
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "user" },
+                _react2.default.createElement("div", {
+                  className: "user-img",
+                  style: {
+                    background: 'url("https://tinyfac.es/data/avatars/26CFEFB3-21C8-49FC-8C19-8E6A62B6D2E0-200w.jpeg")',
+                    backgroundPosition: "center center",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                    borderRadius: "50%",
+                    height: "30px",
+                    width: "30px"
+                  }
+                }),
+                _react2.default.createElement(
+                  "div",
+                  { className: "username" },
+                  "James Doe"
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "conversation" },
+                  _react2.default.createElement("i", { className: "fas fa-comment-dots" })
+                )
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "user active" },
+                _react2.default.createElement("div", {
+                  className: "user-img",
+                  style: {
+                    background: 'url("https://tinyfac.es/data/avatars/26CFEFB3-21C8-49FC-8C19-8E6A62B6D2E0-200w.jpeg")',
+                    backgroundPosition: "center center",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                    borderRadius: "50%",
+                    height: "30px",
+                    width: "30px"
+                  }
+                }),
+                _react2.default.createElement(
+                  "div",
+                  { className: "username" },
+                  "James Doe"
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "conversation" },
+                  _react2.default.createElement("i", { className: "fas fa-comment-dots" })
+                )
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "user" },
+                _react2.default.createElement("div", {
+                  className: "user-img",
+                  style: {
+                    background: 'url("https://tinyfac.es/data/avatars/26CFEFB3-21C8-49FC-8C19-8E6A62B6D2E0-200w.jpeg")',
+                    backgroundPosition: "center center",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                    borderRadius: "50%",
+                    height: "30px",
+                    width: "30px"
+                  }
+                }),
+                _react2.default.createElement(
+                  "div",
+                  { className: "username" },
+                  "James Doe"
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "conversation" },
+                  _react2.default.createElement("i", { className: "fas fa-comment-dots" })
+                )
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "user active" },
+                _react2.default.createElement("div", {
+                  className: "user-img",
+                  style: {
+                    background: 'url("https://tinyfac.es/data/avatars/26CFEFB3-21C8-49FC-8C19-8E6A62B6D2E0-200w.jpeg")',
+                    backgroundPosition: "center center",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                    borderRadius: "50%",
+                    height: "30px",
+                    width: "30px"
+                  }
+                }),
+                _react2.default.createElement(
+                  "div",
+                  { className: "username" },
+                  "James Doe"
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "conversation" },
+                  _react2.default.createElement("i", { className: "fas fa-comment-dots" })
+                )
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "user" },
+                _react2.default.createElement("div", {
+                  className: "user-img",
+                  style: {
+                    background: 'url("https://tinyfac.es/data/avatars/26CFEFB3-21C8-49FC-8C19-8E6A62B6D2E0-200w.jpeg")',
+                    backgroundPosition: "center center",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                    borderRadius: "50%",
+                    height: "30px",
+                    width: "30px"
+                  }
+                }),
+                _react2.default.createElement(
+                  "div",
+                  { className: "username" },
+                  "James Doe"
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "conversation" },
+                  _react2.default.createElement("i", { className: "fas fa-comment-dots" })
+                )
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "user" },
+                _react2.default.createElement("div", {
+                  className: "user-img",
+                  style: {
+                    background: 'url("https://tinyfac.es/data/avatars/26CFEFB3-21C8-49FC-8C19-8E6A62B6D2E0-200w.jpeg")',
+                    backgroundPosition: "center center",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                    borderRadius: "50%",
+                    height: "30px",
+                    width: "30px"
+                  }
+                }),
+                _react2.default.createElement(
+                  "div",
+                  { className: "username" },
+                  "James Doe"
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "conversation" },
+                  _react2.default.createElement("i", { className: "fas fa-comment-dots" })
+                )
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "user active" },
+                _react2.default.createElement("div", {
+                  className: "user-img",
+                  style: {
+                    background: 'url("https://tinyfac.es/data/avatars/26CFEFB3-21C8-49FC-8C19-8E6A62B6D2E0-200w.jpeg")',
+                    backgroundPosition: "center center",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                    borderRadius: "50%",
+                    height: "30px",
+                    width: "30px"
+                  }
+                }),
+                _react2.default.createElement(
+                  "div",
+                  { className: "username" },
+                  "James Doe"
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "conversation" },
+                  _react2.default.createElement("i", { className: "fas fa-comment-dots" })
+                )
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "user" },
+                _react2.default.createElement("div", {
+                  className: "user-img",
+                  style: {
+                    background: 'url("https://tinyfac.es/data/avatars/26CFEFB3-21C8-49FC-8C19-8E6A62B6D2E0-200w.jpeg")',
+                    backgroundPosition: "center center",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                    borderRadius: "50%",
+                    height: "30px",
+                    width: "30px"
+                  }
+                }),
+                _react2.default.createElement(
+                  "div",
+                  { className: "username" },
+                  "James Doe"
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "conversation" },
+                  _react2.default.createElement("i", { className: "fas fa-comment-dots" })
+                )
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "user" },
+                _react2.default.createElement("div", {
+                  className: "user-img",
+                  style: {
+                    background: 'url("https://tinyfac.es/data/avatars/26CFEFB3-21C8-49FC-8C19-8E6A62B6D2E0-200w.jpeg")',
+                    backgroundPosition: "center center",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                    borderRadius: "50%",
+                    height: "30px",
+                    width: "30px"
+                  }
+                }),
+                _react2.default.createElement(
+                  "div",
+                  { className: "username" },
+                  "James Doe"
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "conversation" },
+                  _react2.default.createElement("i", { className: "fas fa-comment-dots" })
+                )
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "user" },
+                _react2.default.createElement("div", {
+                  className: "user-img",
+                  style: {
+                    background: 'url("https://tinyfac.es/data/avatars/26CFEFB3-21C8-49FC-8C19-8E6A62B6D2E0-200w.jpeg")',
+                    backgroundPosition: "center center",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                    borderRadius: "50%",
+                    height: "30px",
+                    width: "30px"
+                  }
+                }),
+                _react2.default.createElement(
+                  "div",
+                  { className: "username" },
+                  "James Doe"
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "conversation" },
+                  _react2.default.createElement("i", { className: "fas fa-comment-dots" })
+                )
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "user" },
+                _react2.default.createElement("div", {
+                  className: "user-img",
+                  style: {
+                    background: 'url("https://tinyfac.es/data/avatars/26CFEFB3-21C8-49FC-8C19-8E6A62B6D2E0-200w.jpeg")',
+                    backgroundPosition: "center center",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                    borderRadius: "50%",
+                    height: "30px",
+                    width: "30px"
+                  }
+                }),
+                _react2.default.createElement(
+                  "div",
+                  { className: "username" },
+                  "James Doe"
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "conversation" },
+                  _react2.default.createElement("i", { className: "fas fa-comment-dots" })
+                )
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "user" },
+                _react2.default.createElement("div", {
+                  className: "user-img",
+                  style: {
+                    background: 'url("https://tinyfac.es/data/avatars/26CFEFB3-21C8-49FC-8C19-8E6A62B6D2E0-200w.jpeg")',
+                    backgroundPosition: "center center",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                    borderRadius: "50%",
+                    height: "30px",
+                    width: "30px"
+                  }
+                }),
+                _react2.default.createElement(
+                  "div",
+                  { className: "username" },
+                  "James Doe"
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "conversation" },
+                  _react2.default.createElement("i", { className: "fas fa-comment-dots" })
+                )
+              )
+            )
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "search" },
+            _react2.default.createElement("input", { type: "text", name: true, defaultValue: true, placeholder: "Search" })
+          )
+        )
       );
     }
   }]);
@@ -56,7 +964,7 @@ var Layout = function (_Component) {
   return Layout;
 }(_react.Component);
 
-var app = document.getElementById('app');
+var app = document.getElementById("app");
 
 _reactDom2.default.render(_react2.default.createElement(Layout, null), app);
 
