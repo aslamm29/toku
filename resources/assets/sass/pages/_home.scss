@@ -9,7 +9,7 @@
   width: 100%;
   background: $darksideBlue;
   z-index: 20;
-  transition: all .6s ease-in-out;
+  transition: all 0.6s ease-in-out .5s;
 
   &.active{
     transform: translate3d(0, 0, 0);

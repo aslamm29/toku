@@ -12,11 +12,7 @@ class Layout extends Component {
   constructor() {
     super();
     this.state = {
-      name: "Aslam",
-      initialData: {
-        first_name: "John",
-        last_name: "Doe"
-      }
+      name: "Aslam"
     };
   }
 
@@ -46,8 +42,8 @@ class Layout extends Component {
   render() {
     return (
       <div className="app-container home-page">
-        <LoadingComp />
-        <LeftMenu initialData={this.state.initialData} />
+        <LoadingComp initialData={(this.state.initialData == undefined) ? 'loading' : this.state.initialData} />
+        <LeftMenu initialData={(this.state.initialData == undefined) ? 'loading' : this.state.initialData} />
         <section id="content-container">
           <SearchHeader />
           <div className="content-area">
