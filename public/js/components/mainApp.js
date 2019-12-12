@@ -156,7 +156,7 @@ var LeftMenu = function (_Component) {
           _react2.default.createElement(
             "div",
             { className: "name", onClick: this.clickedDropdown },
-            "" + this.props.initialData.first_name + this.props.initialData.last_name
+            this.props.initialData.first_name + " " + this.props.initialData.last_name
           ),
           _react2.default.createElement(
             "div",

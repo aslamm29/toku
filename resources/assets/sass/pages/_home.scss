@@ -1,16 +1,27 @@
 #loading-comp{
   display: flex;
+  flex-direction: column;
   position: absolute;
+  transform: translate3d(0, 100%, 0);
+  justify-content: center;
+  align-items: center;
   height: 100%;
   width: 100%;
   background: $darksideBlue;
   z-index: 20;
+  transition: all .6s ease-in-out;
+
+  &.active{
+    transform: translate3d(0, 0, 0);
+  }
 
   .loading-icon{
 
   }
   .loading-text{
-
+    font-size: 3rem;
+    font-weight: 100;
+    color: white;
   }
 
 @keyframes ldio-9vciq4zbfjf {
