@@ -6,6 +6,7 @@ import Messenger from "./components/Messenger";
 import SearchHeader from "./components/SearchHeader";
 import ComposeSection from "./components/ComposeSection";
 import Posts from "./components/Posts";
+import LoadingComp from "./components/LoadingComp"
 
 class Layout extends Component {
   constructor() {
@@ -45,6 +46,7 @@ class Layout extends Component {
   render() {
     return (
       <div className="app-container home-page">
+        <LoadingComp />
         <LeftMenu initialData={this.state.initialData} />
         <section id="content-container">
           <SearchHeader />
