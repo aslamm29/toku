@@ -1,8 +1,15 @@
 'use strict'
+const Post = use('App/Models/Post')
 
 class PostController {
     async store({auth, request, response}){
-        return 'Saved post'
+
+        const newPost = Post.create({
+            content: request.input('content'),
+            user_id: auth.user.id,
+            type: 'text'
+        })
+        return 'item was saved'
     }
     async update(){
         return request.post()
