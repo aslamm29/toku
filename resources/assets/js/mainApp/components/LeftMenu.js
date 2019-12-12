@@ -19,7 +19,9 @@ export default class LeftMenu extends Component {
             <div className="logo">
               <i className="fab fa-typo3" />
             </div>
-            <div className="name" onClick={this.clickedDropdown}>John Doe</div>
+            <div className="name" onClick={this.clickedDropdown}>
+              {`${this.props.initialData.first_name}${this.props.initialData.last_name}`}
+            </div>
             <div className="icon" onClick={this.clickedDropdown}>
               <i className="fas fa-chevron-down" />
             </div>
