@@ -948,7 +948,9 @@ var Posts = function (_Component) {
 
     _this.showLatestPosts = function () {
       if (_this.props.initialData.latestPosts != undefined) {
-        return _this.props.initialData.latestPosts.map(function (post) {
+        return _this.props.initialData.latestPosts.map(function (item) {
+          var post = item.posts;
+          var user = item.users;
           return _react2.default.createElement(
             "div",
             { className: "update-container" },
@@ -956,7 +958,7 @@ var Posts = function (_Component) {
               "div",
               { className: "author-info" },
               _react2.default.createElement("a", { href: "#", className: "user-img", style: {
-                  backgroundImage: "url('" + post.profile_img + "')"
+                  backgroundImage: "url('" + user.profile_img + "')"
                 } }),
               _react2.default.createElement(
                 "div",
@@ -964,7 +966,7 @@ var Posts = function (_Component) {
                 _react2.default.createElement(
                   "a",
                   { href: "/profile" },
-                  post.first_name + " " + post.last_name
+                  user.first_name + " " + user.last_name
                 ),
                 " shared a ",
                 _react2.default.createElement(
@@ -978,7 +980,7 @@ var Posts = function (_Component) {
               "div",
               { className: "media" },
               _react2.default.createElement("div", {
-                className: "" + (post.type == 'text' ? 'story' : 'image'),
+                className: "image",
                 style: {
                   background: 'url("https://www.opstart.ca/wp-content/uploads/2017/04/importance-of-motivation-1080x611.jpg")',
                   backgroundPosition: "center center",
