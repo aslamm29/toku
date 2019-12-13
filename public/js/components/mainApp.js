@@ -955,14 +955,16 @@ var Posts = function (_Component) {
             _react2.default.createElement(
               "div",
               { className: "author-info" },
-              _react2.default.createElement("a", { href: "#", className: "user-img" }),
+              _react2.default.createElement("a", { href: "#", className: "user-img", style: {
+                  backgroundImage: "url('" + post.profile_img + "')"
+                } }),
               _react2.default.createElement(
                 "div",
                 { className: "info" },
                 _react2.default.createElement(
                   "a",
-                  { href: "#" },
-                  "James Doe"
+                  { href: "/profile" },
+                  post.first_name + " " + post.last_name
                 ),
                 " shared a ",
                 _react2.default.createElement(
