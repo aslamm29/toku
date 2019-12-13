@@ -13,14 +13,18 @@ export default class LeftMenu extends Component {
     })
   };
   render() {
-    return (
+    if(this.props.initialData.userInfo == undefined){
+      return (<div>Loading</div>)
+    }else{
+      const { first_name, last_name } = this.props.initialData.userInfo
+      return (
         <section id="left-menu">
           <div className="account-dropdown">
             <div className="logo">
               <i className="fab fa-typo3" />
             </div>
             <div className="name" onClick={this.clickedDropdown}>
-              {`${this.props.initialData.first_name} ${this.props.initialData.last_name}`}
+              {`${first_name} ${last_name}`}
             </div>
             <div className="icon" onClick={this.clickedDropdown}>
               <i className="fas fa-chevron-down" />
@@ -46,7 +50,8 @@ export default class LeftMenu extends Component {
             </div>
           </div>
         </section>
-    );
+      );
+    }
   }
 }
 

@@ -47,8 +47,8 @@ class Layout extends Component {
         <section id="content-container">
           <SearchHeader />
           <div className="content-area">
-            <ComposeSection />
-            <Posts />
+            <ComposeSection initialData={(this.state.initialData == undefined) ? 'loading' : this.state.initialData} />
+            <Posts initialData={(this.state.initialData == undefined) ? 'loading' : this.state.initialData} />
           </div>
         </section>
         <Messenger />

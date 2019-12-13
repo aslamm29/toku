@@ -3,8 +3,7 @@ const Post = use('App/Models/Post')
 
 class PostController {
     async store({auth, request, response}){
-
-        const newPost = Post.create({
+        const newPost = await Post.create({
             content: request.input('content'),
             user_id: auth.user.id,
             type: 'text'
