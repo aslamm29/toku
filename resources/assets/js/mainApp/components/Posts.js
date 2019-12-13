@@ -28,7 +28,7 @@ export default class Posts extends Component {
             </div>
             <div className="media">
               <div
-                className="image"
+                className="image" //Need to create a style for 'story' for pure text posts: className={`${(post.type == 'text') ? 'story' : 'image'}`}
                 style={{
                   background:
                     'url("https://www.opstart.ca/wp-content/uploads/2017/04/importance-of-motivation-1080x611.jpg")',

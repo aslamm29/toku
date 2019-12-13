@@ -980,8 +980,8 @@ var Posts = function (_Component) {
               "div",
               { className: "media" },
               _react2.default.createElement("div", {
-                className: "image",
-                style: {
+                className: "image" //Need to create a style for 'story' for pure text posts: className={`${(post.type == 'text') ? 'story' : 'image'}`}
+                , style: {
                   background: 'url("https://www.opstart.ca/wp-content/uploads/2017/04/importance-of-motivation-1080x611.jpg")',
                   backgroundPosition: "center center",
                   backgroundRepeat: "no-repeat",
