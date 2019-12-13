@@ -5,7 +5,7 @@ import axios from 'axios';
 import ComposeSection from "./ComposeSection";
 import Posts from "./Posts";
 
-export default class Home extends Component {
+export default class Profile extends Component {
   constructor() {
     super();
     this.state = {
@@ -21,15 +21,10 @@ export default class Home extends Component {
         })
   }
 
-  clickedBtn = () => {
-    console.log("swag");
-  };
-
   render() {
     return (
       <div className="content-area">
-        <ComposeSection initialData={(this.state.initialData == undefined) ? 'loading' : this.state.initialData} />
-        <Posts initialData={(this.state.initialData == undefined) ? 'loading' : this.state.initialData} />
+        This is the users profile
       </div>
     );
   }

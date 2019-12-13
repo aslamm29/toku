@@ -13,11 +13,11 @@ export default class Posts extends Component {
 
   showLatestPosts = () => {
     if(this.props.initialData.latestPosts != undefined){
-      return this.props.initialData.latestPosts.map((item) => {
+      return this.props.initialData.latestPosts.map((item, index) => {
         let post = item.posts
         let user = item.users
         return(
-          <div className="update-container">
+          <div className="update-container" key={index}>
             <div className="author-info">
               <a href="#" className="user-img" style={{
                 backgroundImage: `url('${user.profile_img}')`
