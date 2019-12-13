@@ -21,12 +21,12 @@ export default class Posts extends Component {
                 backgroundImage: `url('${post.profile_img}')`
               }} />
               <div className="info">
-                <a href="/profile">{`${post.first_name} ${post.last_name}`}</a> shared a <a href="#">story</a>
+            <a href="/profile">{`${post.first_name} ${post.last_name}`}</a> shared a <a href="#">{(post.type == 'text') ? 'story' : 'image'}</a>
               </div>
             </div>
             <div className="media">
               <div
-                className="image"
+                className={`${(post.type == 'text') ? 'story' : 'image'}`}
                 style={{
                   background:
                     'url("https://www.opstart.ca/wp-content/uploads/2017/04/importance-of-motivation-1080x611.jpg")',

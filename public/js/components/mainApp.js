@@ -970,7 +970,7 @@ var Posts = function (_Component) {
                 _react2.default.createElement(
                   "a",
                   { href: "#" },
-                  "story"
+                  post.type == 'text' ? 'story' : 'image'
                 )
               )
             ),
@@ -978,7 +978,7 @@ var Posts = function (_Component) {
               "div",
               { className: "media" },
               _react2.default.createElement("div", {
-                className: "image",
+                className: "" + (post.type == 'text' ? 'story' : 'image'),
                 style: {
                   background: 'url("https://www.opstart.ca/wp-content/uploads/2017/04/importance-of-motivation-1080x611.jpg")',
                   backgroundPosition: "center center",
