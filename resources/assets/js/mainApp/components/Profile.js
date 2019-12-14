@@ -23,8 +23,12 @@ export default class Profile extends Component {
 
   render() {
     return (
-      <div className="content-area">
-        This is the users profile
+      <div className="content-area profile-page">
+        <div className="user-img"><img src="" /></div>
+        <div className="info">
+          <h1>Anas Aslam</h1>
+          <div className="follow-btn">Follow</div>
+        </div>
       </div>
     );
   }

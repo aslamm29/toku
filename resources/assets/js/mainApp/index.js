@@ -51,7 +51,7 @@ class Layout extends Component {
           <section id="content-container">
             <SearchHeader />
             <Route exact path='/' component={(props) => <Home routeProps={props} initialData={(this.state.initialData == undefined) ? 'loading' : this.state.initialData} />} />
-            <Route exact path='/profile' component={(props) => <Profile routeProps={props} initialData={(this.state.initialData == undefined) ? 'loading' : this.state.initialData} />} />     
+            <Route exact path='/profile/:id' component={(props) => <Profile routeProps={props} initialData={(this.state.initialData == undefined) ? 'loading' : this.state.initialData} />} />     
           </section>
           <Messenger />
         </div>
