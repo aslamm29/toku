@@ -38,10 +38,10 @@ export default class Profile extends Component {
     
 
     if(this.state.userProfile !== undefined){
-      const { first_name, last_name } = this.state.userProfile
+      const { first_name, last_name, profile_img } = this.state.userProfile
       return (
         <div className="content-area profile-page">
-          <div className="user-img"><img src="" /></div>
+          <div className="user-img"><img src={`${profile_img}`} /></div>
           <div className="info">
             <h1>{`${first_name} ${last_name}`}</h1>
             <div className="follow-btn">Follow</div>

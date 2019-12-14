@@ -1311,7 +1311,8 @@ var Profile = function (_Component) {
       if (this.state.userProfile !== undefined) {
         var _state$userProfile = this.state.userProfile,
             first_name = _state$userProfile.first_name,
-            last_name = _state$userProfile.last_name;
+            last_name = _state$userProfile.last_name,
+            profile_img = _state$userProfile.profile_img;
 
         return _react2.default.createElement(
           "div",
@@ -1319,7 +1320,7 @@ var Profile = function (_Component) {
           _react2.default.createElement(
             "div",
             { className: "user-img" },
-            _react2.default.createElement("img", { src: "" })
+            _react2.default.createElement("img", { src: "" + profile_img })
           ),
           _react2.default.createElement(
             "div",
