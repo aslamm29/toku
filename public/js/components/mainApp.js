@@ -14,11 +14,11 @@ var _defineProperty2 = __webpack_require__(338);
 
 var _defineProperty3 = _interopRequireDefault(_defineProperty2);
 
-var _regenerator = __webpack_require__(198);
+var _regenerator = __webpack_require__(136);
 
 var _regenerator2 = _interopRequireDefault(_regenerator);
 
-var _asyncToGenerator2 = __webpack_require__(197);
+var _asyncToGenerator2 = __webpack_require__(135);
 
 var _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);
 
@@ -357,7 +357,7 @@ var _reactDom = __webpack_require__(85);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _reactRouterDom = __webpack_require__(135);
+var _reactRouterDom = __webpack_require__(137);
 
 var _axios = __webpack_require__(103);
 
@@ -1188,6 +1188,14 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _regenerator = __webpack_require__(136);
+
+var _regenerator2 = _interopRequireDefault(_regenerator);
+
+var _asyncToGenerator2 = __webpack_require__(135);
+
+var _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);
+
 var _classCallCheck2 = __webpack_require__(44);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
@@ -1212,7 +1220,7 @@ var _reactDom = __webpack_require__(85);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _reactRouterDom = __webpack_require__(135);
+var _reactRouterDom = __webpack_require__(137);
 
 var _axios = __webpack_require__(103);
 
@@ -1245,40 +1253,96 @@ var Profile = function (_Component) {
   (0, _createClass3.default)(Profile, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      var _this2 = this;
+      var _props$routeProps = this.props.routeProps,
+          match = _props$routeProps.match,
+          location = _props$routeProps.location,
+          history = _props$routeProps.history;
 
-      this.setState({
-        initialData: this.props.initialData
-      }, function () {
-        console.log(_this2.props);
-      });
+      var self = this;
+
+      var getUser = function () {
+        var _ref = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee() {
+          var userProfile;
+          return _regenerator2.default.wrap(function _callee$(_context) {
+            while (1) {
+              switch (_context.prev = _context.next) {
+                case 0:
+                  _context.prev = 0;
+                  _context.next = 3;
+                  return _axios2.default.get("/api/user/" + match.params.id);
+
+                case 3:
+                  userProfile = _context.sent;
+
+
+                  self.setState({
+                    initialData: self.props.initialData,
+                    userProfile: userProfile.data[0]
+                  }, function () {
+                    console.log(self.state);
+                  });
+                  _context.next = 10;
+                  break;
+
+                case 7:
+                  _context.prev = 7;
+                  _context.t0 = _context["catch"](0);
+
+                  console.log(_context.t0);
+
+                case 10:
+                case "end":
+                  return _context.stop();
+              }
+            }
+          }, _callee, this, [[0, 7]]);
+        }));
+
+        return function getUser() {
+          return _ref.apply(this, arguments);
+        };
+      }();
+      getUser();
     }
   }, {
     key: "render",
     value: function render() {
-      return _react2.default.createElement(
-        "div",
-        { className: "content-area profile-page" },
-        _react2.default.createElement(
+
+      if (this.state.userProfile !== undefined) {
+        var _state$userProfile = this.state.userProfile,
+            first_name = _state$userProfile.first_name,
+            last_name = _state$userProfile.last_name;
+
+        return _react2.default.createElement(
           "div",
-          { className: "user-img" },
-          _react2.default.createElement("img", { src: "" })
-        ),
-        _react2.default.createElement(
-          "div",
-          { className: "info" },
+          { className: "content-area profile-page" },
           _react2.default.createElement(
-            "h1",
-            null,
-            "Anas Aslam"
+            "div",
+            { className: "user-img" },
+            _react2.default.createElement("img", { src: "" })
           ),
           _react2.default.createElement(
             "div",
-            { className: "follow-btn" },
-            "Follow"
+            { className: "info" },
+            _react2.default.createElement(
+              "h1",
+              null,
+              first_name + " " + last_name
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "follow-btn" },
+              "Follow"
+            )
           )
-        )
-      );
+        );
+      } else {
+        return _react2.default.createElement(
+          "div",
+          { className: "content-area profile-page" },
+          "Loading"
+        );
+      }
     }
   }]);
   return Profile;
@@ -1399,11 +1463,11 @@ exports.default = Messenger;
 "use strict";
 
 
-var _regenerator = __webpack_require__(198);
+var _regenerator = __webpack_require__(136);
 
 var _regenerator2 = _interopRequireDefault(_regenerator);
 
-var _asyncToGenerator2 = __webpack_require__(197);
+var _asyncToGenerator2 = __webpack_require__(135);
 
 var _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);
 
@@ -1431,7 +1495,7 @@ var _reactDom = __webpack_require__(85);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _reactRouterDom = __webpack_require__(135);
+var _reactRouterDom = __webpack_require__(137);
 
 var _axios = __webpack_require__(103);
 
