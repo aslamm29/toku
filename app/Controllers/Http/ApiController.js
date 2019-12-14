@@ -13,8 +13,7 @@ class ApiController {
             }
         }catch(error){
             console.log(error)
-        }
-        
+        }    
     }
 }
 
