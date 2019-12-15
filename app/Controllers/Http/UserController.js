@@ -1,5 +1,6 @@
 'use strict'
 const User = use('App/Models/User')
+const Database = use('Database')
 
 class UserController {
     async profile({auth, request, response}){
@@ -10,6 +11,19 @@ class UserController {
         }catch(error){
             console.log(error)
         }    
+    }
+
+    async follow({auth, request, response}){
+        try{
+            const followedUser = await Database.table('followers').insert({
+                user_id: 1,
+                follow_id: request.params.id
+            })
+            console.log(followedUser)
+            return 'saved succesfully'
+        }catch(error){
+            console.log(error)
+        }
     }
 }
 

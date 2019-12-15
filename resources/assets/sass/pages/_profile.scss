@@ -4,8 +4,15 @@
   display: grid;
   grid-template-columns: 1fr 3fr;
    .user-img{
-    background: black;
-    img{}
+    background: white;
+    img{
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 300px;
+      width: 300px;
+      border: 5px solid white;
+    }
    }
 
    .info{

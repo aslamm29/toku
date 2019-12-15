@@ -33,5 +33,6 @@ Route.post('/api/post', 'PostController.store')
 Route.post('/api/post/:id', 'PostController.update')
 Route.get('/api/post/:id/delete', 'PostController.destroy')
 Route.get('/api/user/:id', 'UserController.profile')
+Route.get('/api/user/:id/follow', 'UserController.follow')
 
 Route.any('*', ({view}) => view.render('pages/react'))

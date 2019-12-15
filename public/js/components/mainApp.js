@@ -1244,23 +1244,15 @@ var Profile = function (_Component) {
 
     var _this = (0, _possibleConstructorReturn3.default)(this, (Profile.__proto__ || Object.getPrototypeOf(Profile)).call(this));
 
-    _this.state = {
-      name: "Aslam"
-    };
-    return _this;
-  }
+    _this.followUser = function () {
+      var _this$props$routeProp = _this.props.routeProps,
+          match = _this$props$routeProp.match,
+          location = _this$props$routeProp.location,
+          history = _this$props$routeProp.history;
 
-  (0, _createClass3.default)(Profile, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      var _props$routeProps = this.props.routeProps,
-          match = _props$routeProps.match,
-          location = _props$routeProps.location,
-          history = _props$routeProps.history;
+      var self = _this;
 
-      var self = this;
-
-      var getUser = function () {
+      var follow = function () {
         var _ref = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee() {
           var userProfile;
           return _regenerator2.default.wrap(function _callee$(_context) {
@@ -1269,18 +1261,18 @@ var Profile = function (_Component) {
                 case 0:
                   _context.prev = 0;
                   _context.next = 3;
-                  return _axios2.default.get("/api/user/" + match.params.id);
+                  return _axios2.default.get("/api/user/" + match.params.id + "/follow");
 
                 case 3:
                   userProfile = _context.sent;
 
 
                   self.setState({
-                    initialData: self.props.initialData,
-                    userProfile: userProfile.data[0]
+                    following: !self.state.following
                   }, function () {
-                    console.log(self.state);
+                    console.log(userProfile.data);
                   });
+
                   _context.next = 10;
                   break;
 
@@ -1298,8 +1290,70 @@ var Profile = function (_Component) {
           }, _callee, this, [[0, 7]]);
         }));
 
-        return function getUser() {
+        return function follow() {
           return _ref.apply(this, arguments);
+        };
+      }();
+      follow();
+    };
+
+    _this.state = {
+      name: "Aslam"
+    };
+    return _this;
+  }
+
+  (0, _createClass3.default)(Profile, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _props$routeProps = this.props.routeProps,
+          match = _props$routeProps.match,
+          location = _props$routeProps.location,
+          history = _props$routeProps.history;
+
+      var self = this;
+
+      var getUser = function () {
+        var _ref2 = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee2() {
+          var userProfile;
+          return _regenerator2.default.wrap(function _callee2$(_context2) {
+            while (1) {
+              switch (_context2.prev = _context2.next) {
+                case 0:
+                  _context2.prev = 0;
+                  _context2.next = 3;
+                  return _axios2.default.get("/api/user/" + match.params.id);
+
+                case 3:
+                  userProfile = _context2.sent;
+
+
+                  self.setState({
+                    initialData: self.props.initialData,
+                    userProfile: userProfile.data[0],
+                    following: false
+                  }, function () {
+                    console.log(self.state);
+                  });
+                  _context2.next = 10;
+                  break;
+
+                case 7:
+                  _context2.prev = 7;
+                  _context2.t0 = _context2["catch"](0);
+
+                  console.log(_context2.t0);
+
+                case 10:
+                case "end":
+                  return _context2.stop();
+              }
+            }
+          }, _callee2, this, [[0, 7]]);
+        }));
+
+        return function getUser() {
+          return _ref2.apply(this, arguments);
         };
       }();
       getUser();
@@ -1332,8 +1386,8 @@ var Profile = function (_Component) {
             ),
             _react2.default.createElement(
               "div",
-              { className: "follow-btn" },
-              "Follow"
+              { className: "follow-btn", onClick: this.followUser },
+              this.state.following ? 'Unfollow' : 'Follow'
             )
           )
         );
