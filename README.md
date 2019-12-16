@@ -1,31 +1,24 @@
-# Adonis fullstack application
+# A social network fullstack application
 
-This is the fullstack boilerplate for AdonisJs, it comes pre-configured with.
+This is a social network application which can be used to track and interact with individuals online.
+The features included in this application are:
 
-1. Bodyparser
-2. Session
-3. Authentication
-4. Web security middleware
-5. CORS
-6. Edge template engine
-7. Lucid ORM
-8. Migrations and seeds
+1. A login page
+2. A registration page
+3. A welcome page
+4. A home page
+5. A profile page
 
-## Setup
+# The tech stack used to build this application:
 
-Use the adonis command to install the blueprint
+Front-End: HTML, CSS, SCSS, React js
+Backend: Node.js & Adonis
+Database: MySQL
 
-```bash
-adonis new yardstick
-```
+## Commands
 
-or manually clone the repo and then run `npm install`.
+1. manually clone the repo and then run `npm install`.
+2. to run the front end use: npm run watch
+3. to run the back end server use: npm run-server
 
-
-### Migrations
-
-Run the following command to run startup migrations.
-
-```js
-adonis migration:run
-```
+Note: would recommend running MAMP to start the server
