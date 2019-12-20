@@ -21,4 +21,4 @@ Database: MySQL
 2. to run the front end use: npm run watch
 3. to run the back end server use: npm run-server
 
-Note: would recommend running MAMP to start the server
+Note: would recommend running MAMP to start the MySQL server
